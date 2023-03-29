@@ -18,7 +18,7 @@ for(let i=0; i <= 5; i++){
 
     immagini.innerHTML += 
     `
-    <div class="item none">
+    <div class="item">
         <img src="${array[i]}"; alt="">
     </div> 
     `
@@ -26,21 +26,35 @@ for(let i=0; i <= 5; i++){
 
 let posizione = 0;
 
-immagini.getElementsByClassName('item')[posizione].classList.remove('none')
-immagini.getElementsByClassName('item')[posizione].classList.add('active')
+immagini.querySelector('.item').classList.add('active')
 
 let frecciaSu = document.querySelector('.arrow-top');
 let frecciaGiu = document.querySelector('.arrow-down');
 
 
 frecciaSu.addEventListener("click", function(){
-
+    
     document.querySelector('.item.active').classList.remove('active');
 
-    if(posizoine = array.length -1){
+    if(posizione == array.length -1){
         posizione = 0
     }else{
         posizione++
+    }
+
+    document.getElementsByClassName('item')[posizione].classList.add('active');
+
+})
+
+frecciaGiu.addEventListener("click", function(){
+    
+    document.querySelector('.item.active').classList.remove('active');
+
+    if(posizione == 0){
+        posizione = array.length -1
+        
+    }else{
+        posizione--
     }
 
     document.getElementsByClassName('item')[posizione].classList.add('active');
