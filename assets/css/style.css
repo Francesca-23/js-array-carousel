@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    position: relative;
+}
+
+
+.arrow-top, .arrow-down{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: lightgrey;
+    height: 1.3rem;
+    width: 1.3rem;
+    margin: auto;
+}
+
+.arrow-top{
+    position: absolute;
+    top: 0.5rem;
+    right: 50%;
+    cursor: pointer;
+}
+
+.arrow-down{
+    position: absolute;
+    bottom: 0.5rem;
+    right: 50%;
+    cursor: pointer;
+}
+
+.active{
+    display: block;
+}
+
+.none{
+    display: none;
+}
+
+img{
+    height: 500px;
+}
+
+
